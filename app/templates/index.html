@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <title>EMPREGO</title>
+
+    <link rel='stylesheet' href='{% static 'css.css' %}'/>
+  </head>
+
+  <body>
+   
+  <div  class='logo'> 
+  
+    <div class="ii" onclick="alert('sem conecao por enquanto!')"> <img src={% static "fotos/ico.png" %} width=100%  height=100%/></div> 
+    <div class="ii2"><p>Emprego</p></div>
+
+  </div> 
+
+  <div class='logotipo'> 
+
+   <img  src = {% static 'fotos/foto.jpg' %} width=100% height=100%/>
+
+  </div>
+
+
+ <div class='a'>
+
+  <form  action='/'  method='post' class='f' autocomplete='no'> 
+
+    {% csrf_token %}
+  
+    <input  name='nome'  type='text' placeholder='Seu primeiro Nome ?' required/>
+    <div>
+      ********************
+    </div>
+    <input  name='sobrenome'  type='text' placeholder='Sobre Nome ?' required />
+    <div>
+      ********************
+    </div>
+    <input  name='idade'  type='number' placeholder='Sua idade ?' maxlength="2" required/>
+    <div>
+         
+
+
+       ********************
+      
+    </div>
+       
+    <input name="celular" type="tel"  placeholder="ex: (34)99810-8823"  pattern="^\(\d{2}\)\d[0-9]{4,5}-\d{4}$" required>
+    <div> 
+
+
+      ********************
+    </div>
+
+    <input name="Funcao" type='text'  placeholder=" Funcao ? oque saber fazer?"/>
+    <div> 
+
+
+      ********************
+    </div>
+    <input name="Escolaridade" type="text" placeholder='Escolaridade ?'/>
+    <div> 
+
+
+      ********************
+    </div>
+    <input name="Referencias" type="text" placeholder='Referencias ?'/>
+    <div> 
+
+
+      ********************
+    </div>
+    <input name="estadocivil" type="text" placeholder='Estado civil ?'/>
+    <div> 
+
+
+      ********************
+    </div>
+    <input  name='enviar'  type='submit' value="adicionar"/>
+
+
+
+
+
+  </form>
+
+ </div>
+
+ <div class='b'>
+  
+  
+   <table  class="t"> 
+    
+    <tr>
+      <td><h2>ID-USU</h2></td>
+      <td><h2>Nome</h2></td>
+      <td><h2>sobre</h2></td>
+      <td><h2>idade</h2></td>
+      <td><h2>cel</h2></td>
+      <td><h2>Funcao</h2></td>
+      <td><h2>Escolaridade</h2></td>
+      <td><h2>Referencia</h2></td>
+      <td><h2>EstadoCivil</h2></td>
+    
+    
+    </tr>
+    <tr>
+      <th>000</th>
+      <th>paulo HENRIQUE</th>
+      <th>martins RAIUMNDO</th>
+      <th>20</th>
+      <th>34998108832</th>
+      <th>tratorista, tem curso tabme e muito mais</th>
+      <th>ensino medio completo</th>
+      <th>trablhei ali no fransiquim</th>
+      <th>casado</th>
+
+
+
+    </tr>
+  
+  
+  </table>
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+  <script> 
+
+
+  </script>
+  </body>
+
+
+
+
+
+</html>
